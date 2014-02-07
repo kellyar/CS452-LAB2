@@ -1,0 +1,20 @@
+In this lab we used two different shaders.  The first shader is a vertex shader.  This shader is used to change the position of a vertex.  The second shader is a fragment shader which is used to determine the color a pixel.
+
+In order to use these shaders the following actions must be done.
+
+1. Create and compile both the vertex and fragment shader and get their ID's.
+	- you use glCreateShader to create the shader and get the ID
+	- use glShaderSoure to bind the source code to the shader (needs to happend before 
+	  compilation)
+	- Comile the shader using glCompileShader
+
+2. Check for compilation errors.
+
+
+3. Link the two shaders to a "program" and get the program ID.
+	- You create the program using glCreateProgram() and get the ID
+	- Then to attach the shaders to the progam use glAttachShader
+	- Then call glLinkProgram to actually make the shader program
+	- Lastly call glUseProgram to use the shader when you draw
+
+Completing these steps allow you to make a shader program.
